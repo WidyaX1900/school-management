@@ -1,12 +1,14 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', 'verified'])->group(function() {
     Route::get('/', function () {
         return view('templates.dashboard');
     })->name('dashboard');
+    Route::get('/student', [StudentController::class, 'index']);
 });
 
 Route::middleware('auth')->group(function () {
