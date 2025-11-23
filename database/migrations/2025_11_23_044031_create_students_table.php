@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->text('name');
             $table->string('email', 255);
+            $table->string('status', 255);
             $table->unsignedBigInteger('major_id');
             $table->unsignedBigInteger('college_class_id');
             $table->timestamps();
