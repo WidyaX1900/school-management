@@ -80,12 +80,67 @@
                 Email
             </label>
         </div>
-        <button type="button" class="w-full block text-left rounded border border-gray-500 p-2 cursor-pointer">
-            --- Select a Major ---
-        </button>
-        <button type="button" class="w-full block text-left rounded border border-gray-500 p-2 cursor-pointer">
-            --- Select a Class ---
-        </button>
+        <div class="relative">
+            {{-- Dropdown --}}
+            <button type="button" class="js-dropdown-btn w-full block text-left rounded border border-gray-500 p-2 cursor-pointer bg-slate-50" data-target="majorDropdown">
+                --- Select a Major ---
+            </button>
+            <div id="majorDropdown" class="absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
+                <label for="computer-science" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+                    Computer Science
+                    <input 
+                    type="radio"
+                    id="computer-science"  
+                    name="major" 
+                    value="1"
+                    >
+                </label>
+                <label for="accounting" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+                    Accounting
+                    <input 
+                    type="radio"
+                    id="accounting"  
+                    name="major" 
+                    value="2"
+                    >
+                </label>
+                <label for="psychology" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+                    Psychology
+                    <input 
+                    type="radio"
+                    id="psychology"  
+                    name="major" 
+                    value="3"
+                    >
+                </label>
+                <label for="chemistry" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+                    Chemistry
+                    <input 
+                    type="radio"
+                    id="chemistry" 
+                    name="major" 
+                    value="4"
+                    >
+                </label>
+            </div>
+        </div>
+        <div class="relative">
+            {{-- Dropdown --}}
+            <button type="button" class="js-dropdown-btn w-full block text-left rounded border border-gray-500 p-2 cursor-pointer bg-slate-50" data-target="classDropdown">
+                --- Select a Class ---
+            </button>
+            <div id="classDropdown" class="absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
+                <label for="ab156" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+                    AB156
+                    <input 
+                    type="radio"
+                    id="ab156"  
+                    name="major" 
+                    value="1"
+                    >
+                </label>
+            </div>
+        </div>
         <div class="flex justify-end items-center">
             <a href="#"
                 class="text-blue-950 mr-5 cursor-pointer transition-transform duration-75 active:scale-75">Cancel</a>
@@ -95,3 +150,5 @@
         </div>
     </form>
 </x-mycomponents.modal>
+
+@vite(['resources/js/student/front-end/dropdown.js'])
