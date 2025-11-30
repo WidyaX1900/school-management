@@ -1,13 +1,12 @@
 <x-layout>
     <div class="flex justify-between items-center">
         <h1 class="font-bold text-2xl">Manage Students</h1>
-        <button type="button"
-            class="w-44 py-2.5 bg-blue-950 text-slate-50 rounded font-medium flex justify-center items-center transition-transform duration-75 active:scale-75 shadow-xl shadow-blue-950/25 active:shadow-transparent">
+        <x-mycomponents.primary-button type="button" class="w-44 py-2.5 font-medium flex justify-center items-center">
             <span class="material-icons mr-1.5">
                 add
             </span>
             New Student
-        </button>
+        </x-mycomponents.primary-button>
     </div>
     <table class="mt-14 w-full">
         <thead class="border-b text-left">
@@ -28,23 +27,23 @@
                 <td>Rangga Widya</td>
                 <td>ranggawidyasastra@email.com</td>
                 <td class="flex mt-4">
-                    <a href="#" class="rounded bg-sky-400 px-2 transition-transform duration-75 active:scale-75">
-                        <span class="material-icons">
-                            <span class="text-[1.1rem]">visibility</span>
-                        </span>
+                    <a href="#">
+                        <x-mycomponents.info-button type="button">
+                            <span class="material-icons">
+                                <span class="text-[1.1rem]">visibility</span>
+                            </span>
+                        </x-mycomponents.info-button>
                     </a>
-                    <button type="button"
-                        class="rounded bg-amber-500 px-2 mx-5 transition-transform duration-75 active:scale-75">
+                    <x-mycomponents.warning-button type="button">
                         <span class="material-icons">
                             <span class="text-[1.1rem]">edit</span>
                         </span>
-                    </button>
-                    <button type="button"
-                        class="rounded bg-red-600 text-slate-100 px-2 transition-transform duration-75 active:scale-75">
+                    </x-mycomponents.warning-button>
+                    <x-mycomponents.danger-button type="button">
                         <span class="material-icons">
                             <span class="text-[1.1rem]">delete</span>
                         </span>
-                    </button>
+                    </x-mycomponents.danger-button>
                 </td>
             </tr>
         </tbody>
