@@ -15,18 +15,18 @@
     <aside class="fixed top-0 left-0 w-1/5 h-full p-5 bg-blue-950 text-slate-200">
         <h1 class="text-center text-xl font-semibold">School Management System</h1>
         <ul class="mt-8">
-            <x-navlink href="/">
+            <x-mycomponents.nav-link href="/">
                 <span class="material-icons -translate-y-0.5 me-1">
                     home
                 </span>
                 Dashboard
-            </x-navlink>
-            <x-navlink href="/student">
+            </x-mycomponents.nav-link>
+            <x-mycomponents.nav-link href="/student">
                 <span class="material-icons -translate-y-0.5 me-1">
                     group
                 </span>
                 Students
-            </x-navlink>
+            </x-mycomponents.nav-link>
         </ul>
     </aside>
 
