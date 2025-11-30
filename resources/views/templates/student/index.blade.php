@@ -49,3 +49,49 @@
         </tbody>
     </table>
 </x-layout>
+
+{{-- Modal --}}
+<x-mycomponents.modal id="addStudentModal">
+    <h2 class="text-xl font-bold mb-5">Add Student</h2>
+    <form id="addStudentForm" class="flex flex-col gap-5">
+        @csrf
+        <div class="relative">
+            <input type="text" id="name" name="name" placeholder=" "
+                class="peer block w-full appearance-none bg-transparent rounded outline-none focus:ring-2 focus:ring-blue-950 focus:outline-none">
+
+            <label for="name" id="name-label"
+                class="absolute left-2 bg-slate-50 px-3 top-2 origin-left -translate-y-1/2 text-gray-500 transition-all duration-200
+             peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:translate-y-0
+             peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-blue-950
+             peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75">
+                Full Name
+            </label>
+        </div>
+        <div class="relative">
+            <input type="text" id="email" name="email" placeholder=" "
+                class="peer block w-full appearance-none bg-transparent rounded outline-none focus:ring-2 focus:ring-blue-950 focus:outline-none"
+                inputmode="email">
+
+            <label for="email" id="email-label"
+                class="absolute left-2 bg-slate-50 px-3 top-2 origin-left -translate-y-1/2 text-gray-500 transition-all duration-200
+             peer-placeholder-shown:top-2 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:translate-y-0
+             peer-focus:top-0 peer-focus:-translate-y-4 peer-focus:scale-75 peer-focus:text-blue-950
+             peer-[:not(:placeholder-shown)]:top-0 peer-[:not(:placeholder-shown)]:-translate-y-4 peer-[:not(:placeholder-shown)]:scale-75">
+                Email
+            </label>
+        </div>
+        <button type="button" class="w-full block text-left rounded border border-gray-500 p-2 cursor-pointer">
+            --- Select a Major ---
+        </button>
+        <button type="button" class="w-full block text-left rounded border border-gray-500 p-2 cursor-pointer">
+            --- Select a Class ---
+        </button>
+        <div class="flex justify-end items-center">
+            <a href="#"
+                class="text-blue-950 mr-5 cursor-pointer transition-transform duration-75 active:scale-75">Cancel</a>
+            <x-mycomponents.primary-button class="font-medium flex items-center px-5 py-2">
+                Save
+            </x-mycomponents.primary-button>
+        </div>
+    </form>
+</x-mycomponents.modal>
