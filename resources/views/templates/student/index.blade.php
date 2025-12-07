@@ -51,7 +51,7 @@
 </x-layout>
 
 {{-- Modal --}}
-<x-mycomponents.modal id="addStudentModal">
+<x-mycomponents.modal id="addStudentModal" class="flex justify-center items-start pt-5">
     <h2 class="text-xl font-bold mb-5">Add Student</h2>
     <form id="addStudentForm" class="flex flex-col gap-5">
         @csrf
@@ -82,64 +82,61 @@
         </div>
         <div class="relative">
             {{-- Dropdown --}}
-            <button type="button" class="js-dropdown-btn w-full block text-left rounded border border-gray-500 p-2 cursor-pointer bg-slate-50" data-target="majorDropdown">
+            <button type="button"
+                class="js-dropdown-btn w-full block text-left rounded border border-gray-500 p-2 cursor-pointer bg-slate-50"
+                data-target="majorDropdown">
                 --- Select a Major ---
             </button>
-            <div id="majorDropdown" class="absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
-                <label for="computer-science" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+            <div id="majorDropdown"
+                class="absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
+                <label for="computer-science"
+                    class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
                     Computer Science
-                    <input 
-                    type="radio"
-                    id="computer-science"  
-                    name="major" 
-                    value="1"
-                    >
+                    <input type="radio" id="computer-science" name="major" value="1">
                 </label>
-                <label for="accounting" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+                <label for="accounting"
+                    class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
                     Accounting
-                    <input 
-                    type="radio"
-                    id="accounting"  
-                    name="major" 
-                    value="2"
-                    >
+                    <input type="radio" id="accounting" name="major" value="2">
                 </label>
-                <label for="psychology" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+                <label for="psychology"
+                    class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
                     Psychology
-                    <input 
-                    type="radio"
-                    id="psychology"  
-                    name="major" 
-                    value="3"
-                    >
+                    <input type="radio" id="psychology" name="major" value="3">
                 </label>
-                <label for="chemistry" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+                <label for="chemistry"
+                    class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
                     Chemistry
-                    <input 
-                    type="radio"
-                    id="chemistry" 
-                    name="major" 
-                    value="4"
-                    >
+                    <input type="radio" id="chemistry" name="major" value="4">
                 </label>
             </div>
         </div>
         <div class="relative">
             {{-- Dropdown --}}
-            <button type="button" class="js-dropdown-btn w-full block text-left rounded border border-gray-500 p-2 cursor-pointer bg-slate-50" data-target="classDropdown">
+            <button type="button"
+                class="js-dropdown-btn w-full block text-left rounded border border-gray-500 p-2 cursor-pointer bg-slate-50"
+                data-target="classDropdown">
                 --- Select a Class ---
             </button>
-            <div id="classDropdown" class="absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
-                <label for="ab156" class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
+            <div id="classDropdown"
+                class="absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
+                <label for="ab156"
+                    class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
                     AB156
-                    <input 
-                    type="radio"
-                    id="ab156"  
-                    name="major" 
-                    value="1"
-                    >
+                    <input type="radio" id="ab156" name="major" value="1">
                 </label>
             </div>
+        </div>
+        <div>
+            <label for="photo">Upload Student's Photo</label>
+            <input type="file" name="photo" id="photo" class="hidden">
+            <button type="button" id="photoUploadBtn"
+                class="w-full h-28 rounded flex flex-col justify-center items-center bg-gray-300 border-4 border-gray-400 text-gray-400">
+                <span class="material-icons text-5xl">
+                    image
+                </span>
+                Click or drag photo
+            </button>
         </div>
         <div class="flex justify-end items-center">
             <a href="#"
