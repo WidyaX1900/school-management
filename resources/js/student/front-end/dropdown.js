@@ -1,4 +1,6 @@
-document.querySelectorAll(".js-dropdown-btn").forEach((button) => {
+const dropdownButtons = document.querySelectorAll(".js-dropdown-btn"); 
+
+dropdownButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
         const dataTarget = event.target.dataset.target;
         const dropdownEl = document.getElementById(dataTarget);
