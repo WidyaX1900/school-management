@@ -88,7 +88,7 @@
                 --- Select a Major ---
             </button>
             <div id="majorDropdown"
-                class="absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
+                class="js-dropdown absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
                 <label for="computer-science"
                     class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
                     Computer Science
@@ -119,7 +119,7 @@
                 --- Select a Class ---
             </button>
             <div id="classDropdown"
-                class="absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
+                class="js-dropdown absolute top-11 left-0 w-full rounded border border-gray-500 p-3 bg-slate-50 flex flex-col gap-2 hidden z-50">
                 <label for="ab156"
                     class="flex items-center justify-between hover:bg-gray-300 p-2.5 rounded cursor-pointer">
                     AB156
