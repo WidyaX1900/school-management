@@ -1,7 +1,7 @@
 <x-layout>
     <div class="flex justify-between items-center">
         <h1 class="font-bold text-2xl">Manage Students</h1>
-        <x-mycomponents.primary-button type="button" class="w-44 py-2.5 font-medium flex justify-center items-center">
+        <x-mycomponents.primary-button type="button" id="addStudentBtn" class="w-44 py-2.5 font-medium flex justify-center items-center">
             <span class="material-icons mr-1.5">
                 add
             </span>
@@ -139,8 +139,7 @@
             </button>
         </div>
         <div class="flex justify-end items-center">
-            <a href="#"
-                class="text-blue-950 mr-5 cursor-pointer transition-transform duration-75 active:scale-75">Cancel</a>
+            <button type="button" id="dismissStudentModalBtn" class="text-blue-950 mr-5 cursor-pointer transition-transform duration-75 active:scale-75">Cancel</button>
             <x-mycomponents.primary-button class="font-medium flex items-center px-5 py-2">
                 Save
             </x-mycomponents.primary-button>
@@ -148,4 +147,7 @@
     </form>
 </x-mycomponents.modal>
 
-@vite(['resources/js/student/front-end/dropdown.js'])
+@vite([
+    'resources/js/student/front-end/dropdown.js',
+    'resources/js/student/front-end/add-student-modal.js',
+])
