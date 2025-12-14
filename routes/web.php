@@ -9,6 +9,7 @@ Route::middleware(['auth', 'verified'])->group(function() {
         return view('templates.dashboard');
     })->name('dashboard');
     Route::get('/student', [StudentController::class, 'index']);
+    Route::get('/student/create', [StudentController::class, 'create']);
 });
 
 Route::middleware('auth')->group(function () {
